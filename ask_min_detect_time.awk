@@ -7,10 +7,11 @@ NR==1{
 }
 {
 	if(m>$5 && $5 != 0) {
+	    print "detected in",d,m
 		d=$1;
 		m=$5;
 	}
 }
 END{
-	print d,m
+	print "finally at",d,m
 }

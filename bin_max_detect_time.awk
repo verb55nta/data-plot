@@ -6,11 +6,12 @@ NR==1{
 	m=$3;
 }
 {
-	if(m>$3 && $3 != 0) {
+	if(m<$3) {
+	    print "detected in",d,m
 		d=$1;
 		m=$3;
 	}
 }
 END{
-	print d,m
+	print "finally at",d,m
 }
